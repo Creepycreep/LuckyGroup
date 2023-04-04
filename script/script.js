@@ -24,8 +24,8 @@ function getData() {
       return;
     }
 
-    let str = xhr.response.slice(2, -2);
-    text.innerHTML = str;
+    let str = xhr.response.slice(2).split(`","`);
+    text.innerHTML = str[0];
   }
 
   xhr.send();
